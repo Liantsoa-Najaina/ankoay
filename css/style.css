@@ -1,5 +1,5 @@
 * {
-    font-family: "Roboto";
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,17 +7,126 @@
 
 .header {
     width: 100%;
+    height: 17dvh;
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .title {
     width: 100%;
+    height: 60%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: relative;
+    background-color: #020324;
 }
+
+.logo {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: blanchedalmond; */
+}
+
+.logo a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logo a img {
+    width: 90px;
+    aspect-ratio: 1/1;
+}
+
+.title .language {
+    position: absolute;
+    right: 2.5%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 40%;
+    background-color: #020324;
+    position: sticky;
+    top: 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+    font-style: 18px;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: #67CAD8;
+}
+
+.hamburger {
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: 0;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hamburger::before {
+    top: -10px;
+    width: 20px;
+}
+
+.hamburger::after{
+    top: 10px;
+    width: 25px;
+}
+
+
+
+
 
 .language-for-mobile {
     display: none;
@@ -47,7 +156,7 @@
         text-decoration: none;
     }
 
-    .logo .language {
+    .title .language {
         justify-self: flex-end;
     }
 
