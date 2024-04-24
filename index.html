@@ -6,53 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/icons/ankoay.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <title>Ankoay | Home</title>
+    <title>Ankoay | Home </title>
 </head>
 
-<body id="body">
+<body id="home">
+    <!-- The header -->
     <header class="header">
-        <!-- First child of .header -->
-        <div class="title">
-            <!-- First child of .title -->
-            <div class="logo">
-                <a href="#body">
-                    <img src="assets/icons/ankoay_logo.png" alt="Ankoay logo">
-                    <h1>Ankoay</h1>
-                </a>
-            </div>
-            <!-- Second child of .title -->
-            <div class="language">
-                <img src="assets/icons/google-icons/translate.png" alt="Translate icons">
-                <select name="Languages" id="language">
-                    <option value="English">English</option>
-                    <option value="French">French</option>
-                    <option value="Malagasy">Malagasy</option>
-                </select>
-            </div>
-
-            <div class="language-for-mobile">
-                <select name="Languages" id="language-for-mobile">
-                    <option>ENG</option>
-                    <option>FR</option>
-                    <option>MLG</option>
-                </select>
-            </div>
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#home">
+                <img src="assets/icons/ankoay_logo.png" alt="">
+                <h1>Ankoay</h1>
+            </a>
         </div>
 
-        <!-- Second child of .header -->
-        <div class="wrapper">
-            <nav class="navigation">
-                <input type="checkbox" class="toggle-menu">
-                <div class="hamburger"></div>
+        <!-- Navigation bar -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Book</a></li>
+                <li><a href="#">Manage</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
 
-                <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Book</a></li>
-                    <li><a href="#">Advisory</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+        <!-- Search, account -->
+        <div class="user-div">
+            <!-- Search -->
+            <div class="searchbar">
+                <input type="search" name="search" id="search" placeholder="Search...">
+                <button type="button">
+                    <img src="assets/icons/search.png" alt="Search">
+                </button>
+            </div>
+
+            <!-- Account -->
+            <button type="button">Sign up</button>
         </div>
+
     </header>
 </body>
 
