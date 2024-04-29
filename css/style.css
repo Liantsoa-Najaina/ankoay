@@ -177,13 +177,13 @@ body {
 }
 
 /* Hero image  */
-.hero {
+main .hero {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)), url("../assets/img/airplane.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)), url("../assets/img/airplane-7766079_1920.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -192,19 +192,32 @@ body {
     z-index: 1;
 }
 
+@keyframes slideHr {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 20%;
+    }
+    100% {
+        width: 40%;
+    }
+}
 
 
-.hero hr {
+
+main .hero hr {
     width: 40%;
     height: 3px;
     background-color: var(--second-white);
     border: none;
     border-radius: 5px;
+    animation: slideHr 1s ease-in 0 1 normal none;
 }
 
 
 
-.hero .hero-text {
+main .hero .hero-text {
     font-size: 3.5vw;
     font-family: 'Oxygen', sans-serif;
     font-weight: bolder;
@@ -212,20 +225,20 @@ body {
     line-height: 1.5;
 }
 
-.hero p {
+main .hero p {
     font-size: 2vw;
     font-weight: bold;
     color: var(--second-white);
 }
 
-.hero .buttons {
+main .hero .buttons {
     display: inline-flex;
     justify-content: space-evenly;
     width: 35vw;
     padding: 50px;
 }
 
-.hero .buttons button {
+main .hero .buttons button {
     width: 8vw;
     height: 5vh;
     background-color: var(--second-white);
@@ -235,14 +248,14 @@ body {
     border-radius: 12px;
 }
 
-.hero .buttons button a {
+main .hero .buttons button a {
     width: 100%;
     height: 100%;
     color: var(--primary);
     font-weight: bold;
 }
 
-.hero .buttons button:hover {
+main .hero .buttons button:hover {
     background-color: var(--primary);
     color: var(--white);
 }
