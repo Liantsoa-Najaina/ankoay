@@ -25,7 +25,7 @@ a {
 
 body {
     background-color: var(--white);
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 /* The header */
@@ -192,27 +192,26 @@ main .hero {
     z-index: 1;
 }
 
-@keyframes slideHr {
-    0% {
+@keyframes lines-animation {
+    from {
         width: 0;
+        height: 0;
     }
-    50% {
-        width: 20%;
-    }
-    100% {
+    to {
         width: 40%;
+        height: 3px;
     }
 }
 
-
-
-main .hero hr {
+main .hero .top-line,
+main .hero .bottom-line {
     width: 40%;
     height: 3px;
     background-color: var(--second-white);
     border: none;
     border-radius: 5px;
-    animation: slideHr 1s ease-in 0 1 normal none;
+    transition: 1s;
+    animation: lines-animation 1s ease-in forwards 1 normal normal;
 }
 
 
@@ -241,33 +240,107 @@ main .hero .buttons {
 main .hero .buttons button {
     width: 8vw;
     height: 5vh;
-    background-color: var(--second-white);
-    font-size: 1vw;
-    border: none;
-    transition: 0.5s;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    font-size: 1.1vw;
+    border: 2px solid var(--second-white);
+    color: var(--second-white);
+    transition: 0.4s;
     border-radius: 12px;
+    box-shadow: 0 0 2px;
 }
 
 main .hero .buttons button a {
     width: 100%;
     height: 100%;
-    color: var(--primary);
+    color: var(--second-white);
     font-weight: bold;
 }
 
 main .hero .buttons button:hover {
+    transform: scale(1.1);
     background-color: var(--primary);
-    color: var(--white);
 }
 
 
-/* main {
+main .advertise {
+    margin-top: 5vh;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main .advertise h2 {
+    font-size: 3vw;
+}
+
+main .ads-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    background-image: url("../assets/img/passengers.jpg");
-    background-position: center;
-    background-size: cover;
-    margin-top: 85vh;
-} */
+    height: 100%;
+}
+
+
+
+main .ads-container .first,
+main .ads-container .second,
+main .ads-container .third {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main .ads-container .first {
+    margin-bottom: 25%;
+    transition: 1s;
+}
+
+main .ads-container .first,
+main .ads-container .third {
+    width: 35%;
+}
+
+main .ads-container .second {
+    width: 30%;
+    margin-top: 5%;
+}
+
+main .ads-container .third{
+    margin-bottom: 5%;
+}
+
+
+
+main .ads-container .first img,
+main .ads-container .third img {
+    width: 20vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+main .ads-container .second img {
+    width: 17vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    /* margin-top: 20%; */
+    transition: 0.4s;
+
+}
+
+main .ads-container .first img:hover,
+main .ads-container .second img:hover,
+main .ads-container .third img:hover {
+    box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.9);
+    transform: scale(0.9);
+}
 
 
 @media screen and (max-width: 850px) {
@@ -350,6 +423,12 @@ main .hero .buttons button:hover {
     .navigation .menu li a:hover {
         padding: 20px;
         font-size: 12px;
+    }
+
+    main .hero {
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
     }
 
     .hero .hero-text {
