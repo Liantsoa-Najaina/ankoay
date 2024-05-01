@@ -67,7 +67,7 @@ body {
 }
 
 .logo a .logo-text {
-    font-family: "Bruno Ace", sans-serif;
+    font-family: 'Bruno Ace', sans-serif;
     font-size: xx-large;
 }
 
@@ -108,8 +108,6 @@ body {
     padding: 35px 25px 45px 25px;
     color: var(--secondary);
 }
-
-
 
 .navigation .burger-menu {
     position: relative;
@@ -182,7 +180,7 @@ main .hero {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)), url("../assets/img/airplane-7766079_1920.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)), url("../assets/img/132.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -214,8 +212,6 @@ main .hero .bottom-line {
     animation: lines-animation 0.7s ease-in;
 }
 
-
-
 main .hero .hero-text {
     font-size: 3.5vw;
     font-family: 'Oxygen', sans-serif;
@@ -230,19 +226,16 @@ main .hero p {
     color: var(--second-white);
 }
 
-
-
 main .hero button {
-    width: 10vw;
-    height: 5vh;
     background-color: transparent;
     backdrop-filter: blur(20px);
-    font-size: 1.1vw;
+    font-size: 1.25vw;
     border: 2px solid var(--second-white);
     color: var(--second-white);
     transition: 0.4s;
     border-radius: 12px;
     box-shadow: 0 0 2px;
+    padding: 5px;
 }
 
 main .hero button a {
@@ -259,7 +252,7 @@ main .hero button:hover {
 
 main .flights {
     width: 100%;
-    min-height: 100vh;
+    min-height: 65vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -268,7 +261,7 @@ main .flights {
 }
 
 main .flights .flights-container {
-    display: inherit;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
@@ -291,7 +284,7 @@ main .flights .flights-container {
 }
 
 .flights-container .column .card {
-    display: inherit;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
@@ -300,10 +293,11 @@ main .flights .flights-container {
 
 .flights-container .column .card img {
     width: 100%;
+    height: 30vh;
 }
 
 .column .card .container {
-    display: inherit;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
@@ -342,7 +336,7 @@ main .flights .flights-container {
 main .form-signin {
     background-color: var(--primary);
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -369,6 +363,7 @@ main .form-signin .form-container {
 .form-signin .form-container img {
     width: 24%;
     height: 70vh;
+    margin-top: -5vh;
 }
 
 .form-signin .form-container form {
@@ -432,7 +427,177 @@ main .form-signin .form-container {
     color: var(--second-white);
 }
 
-@media screen and (max-width: 850px) {
+main .awards {
+    background-color: var(--primary);
+    color: var(--second-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-top: 10vh;
+}
+
+main .awards .content {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main .awards .airline-awards {
+    width: 25%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main .awards .airline-awards img {
+    width: 20vw;
+}
+
+main .awards .content .promise {
+    width: 30%;
+    border-block: 2px solid var(--second-white);
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    padding-block: 5vh;
+}
+
+.awards .content .pics-container img {
+    width: 25vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+main .business-class {
+    width: 100%;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+main .business-class .reasons {
+    width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+}
+
+main .business-class .reasons ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main .business-class .reasons ul li {
+    width: 20vw;
+    list-style-type: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 5px rgba(0, 0, 0, 0.5);
+    padding-bottom: 5vh;
+    margin-top: 5vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+main .business-class .reasons ul li img {
+    width: 25vw;
+    height: 50vh;
+    transition: 0.5s;
+}
+
+main .business-class .reasons ul li img:hover {
+    transform: scale(1.05);
+} 
+
+main .business-class .reasons ul li figcaption {
+    padding-top: 2vh;
+    font-size: 1rem;
+}
+
+main .business-class button {
+    width: 10vw;
+    height: 5vh;
+    background-color: var(--primary);
+    color: var(--second-white);
+    border: none;
+    border-radius: 2%;
+    transition: 0.5s;
+}
+
+main .business-class button:hover {
+    background-color: var(--pen-blue);
+
+}
+
+
+.footer {
+    background-color: var(--primary);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--pen-blue);
+    padding-top: 5vh;
+    color: var(--second-white);
+}
+
+.footer .links {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.footer .links li {
+    list-style-type: none;
+    font-size: small;
+}
+
+.footer .links li a {
+    color: var(--second-white);
+    transition: 0.5s;
+}
+
+.footer .links li a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.footer .socials {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.footer .copyrights {
+    margin-bottom: 3vh;
+}
+
+.footer .copyrights span {
+    font-family: 'Bruno Ace', sans-serif;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
 
     .navigation .burger-menu,
     .navigation #check {
@@ -473,8 +638,12 @@ main .form-signin .form-container {
         width: 15vw;
     }
 
+    main .flights {
+        min-height: 100vh;
+    }
+
     main .flights .flights-container {
-        display: inherit;
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -511,6 +680,52 @@ main .form-signin .form-container {
         height: 4vh;
     }
 
+    main .business-class .reasons ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    main .business-class .reasons ul li {
+        width: 45vw;
+    }
+
+    main .business-class .reasons ul li img {
+        width: 100%;
+    }
+
+
+    main .awards {
+        padding-top: 4vh;
+    }
+
+    main .awards h2 {
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    main .awards .content {
+        margin-top: -8vh;
+    }
+
+    main .awards .airline-awards {
+        width: 25%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main .awards .airline-awards img {
+        width: 28vw;
+        margin-bottom: 2vh;
+    }
+
+    main .awards .content .promise {
+        width: 34%;
+        padding-block: 2vh;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -554,17 +769,9 @@ main .form-signin .form-container {
     }
 
     main .hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)), url("../assets/img/airplane-mobile.jpg");
-        position: relative;
-        display: flex;
-        width: 100%;
-        height: 85vh;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)), url("../assets/img/medium-shot-female-flight-attendant-studio.jpg");
         background-position: center;
         background-size: cover;
-        background-attachment: fixed;
         background-repeat: no-repeat;
         z-index: 1;
     }
@@ -578,20 +785,13 @@ main .form-signin .form-container {
         font-size: 4.5vw;
     }
 
-
-    .hero button {
-        font-size: medium;
-        width: 28vw;
-        height: 2vh;
-    }
-
     main .flights {
         margin-top: 2vh;
     }
 
     main .flights .flights-container {
         padding-top: 2vh;
-        display: inherit;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -603,21 +803,22 @@ main .form-signin .form-container {
         margin-bottom: 4vh;
     }
 
+    .flights-container .column .card img {
+        height: 25vh;
+    }
+
     main .flights .see-more {
         width: 12vw;
         height: 3vh;
     }
 
     main .form-signin {
-        margin-top: 5px;
+        margin-top: 3vh;
         padding-top: 5vh;
     }
 
     main .form-signin .form-container {
         margin-top: 5px;
-    }
-
-    main .form-signin .form-container {
         height: 70%;
         justify-content: space-evenly;
     }
@@ -633,12 +834,12 @@ main .form-signin .form-container {
 
     .form-signin .form-container form {
         width: 100%;
+        margin-top: -20vh;
     }
 
     .form-signin .form-container form .container {
         width: 85%;
     }
-
 
     .form-signin .form-container form .container input {
         width: 40vw;
@@ -652,4 +853,71 @@ main .form-signin .form-container {
         width: 20vw;
     }
 
+    main .business-class .reasons ul {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    main .business-class .reasons ul li {
+        width: 80vw;
+        height: 47vh;
+    }
+
+    main .business-class .reasons ul li img {
+        width: 100%;
+        height: 40vh;
+    }
+
+    main .business-class button {
+        width: 25vw;
+        height: 4vh;
+    }
+
+    main .awards {
+        padding-top: 5vh;
+    }
+
+    main .awards h2 {
+        font-size: 1rem;
+    }
+
+    main .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    main .awards .airline-awards {
+        width: 95%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 15%;
+    }
+
+    main .awards .airline-awards img {
+        width: 60vw;
+    }
+
+    main .awards .content .promise {
+        width: 90%;
+        padding-block: 2vh;
+        margin-bottom: 5vh;
+    }
+
+    .awards .content .pics-container img {
+        width: 90vw;
+        border-radius: 2%;
+    }
+
+    .footer .links {
+        width: 100%;
+    }
+
+    .footer .socials {
+        width: 70%;
+    }
 }
