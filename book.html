@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/icons/ankoay.png" type="image/x-icon">
+    <link rel="favicon" href="assets/icons/ankoay.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/book.style.css">
     <title>Ankoay | Book </title>
 </head>
 
@@ -28,15 +29,93 @@
 
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="book.html"  class="active">Book</a></li>
+                <li><a href="book.html" class="active">Book</a></li>
                 <li><a href="manage.html">Manage</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="help.html">Help</a></li>
             </ul>
         </nav>
     </header>
-    
 
+    <main>
+        <section class="booking-hero">
+            <h2>Online booking</h2>
+            <p>Book your flight here</p>
+        </section>
+
+        <section class="booking">
+            <h2>Find your flight</h2>
+
+            <form action="">
+                <div class="itinerary">
+                    <label for="from">From :</label>
+                    <input type="text" name="itinerary" id="from" required>
+                    <br>
+                    <label for="stopover">Stopover : </label>
+                    <input type="text" name="itinerary" id="stopover">
+                    <br>
+                    <label for="to">To : </label>
+                    <input type="text" name="itinerary" id="to" required>
+                </div>
+
+                <div class="ticket-type">
+                    <input type="radio" name="ticket-type" id="return">
+                    <label for="return">Return</label>
+                    <br>
+                    <input type="radio" name="ticket-type" id="one-way">
+                    <label for="one-way">One way</label>
+                </div>
+
+                <div class="schedule">
+                    <label for="depart">Depart </label>
+                    <input type="date" name="schedule" id="depart" required>
+                    <br>
+                    <label for="return">Return</label>
+                    <input type="date" name="schedule" id="return">
+                </div>
+
+                <div class="traveling-class">
+                    <label for="travel-class">Travel class</label>
+                    <select name="travel-class" id="travel-class">
+                        <option value="class">Economy class</option>
+                        <option value="class">Business class</option>
+                        <option value="class">Premium class</option>
+                    </select>
+                </div>
+
+                <h3>Ticket pricing</h3>
+                <div class="ticket-pricing">
+                    <input type="radio" name="pricing" id="lowest">
+                    <label for="lowest">Lowest price</label>
+                    <br>
+                    <input type="radio" name="pricing" id="flexible">
+                    <label for="flexible">Flexible ticket</label>
+                </div>
+
+                <h3>Passengers</h3>
+                <div class="number-of-passengers">
+                    <div class="older">
+                        <label for="adult">Adults <span>(18+)</span></label>
+                        <input type="number" name="passengers" id="adult" min="0">
+                        <br>
+                        <label for="young-adult">Teen<span>(12-18)</span></label>
+                        <input type="number" name="passengers" id="young-adult" min="0">
+                    </div>
+
+                    <div class="younger">
+                        <label for="children">Children <span>(2-11)</span></label>
+                        <input type="number" name="passengers" id="children" min="0">
+                        <br>
+                        <label for="infant">Infant <span>(2-)</span></label>
+                        <input type="number" name="passengers" id="infant" min="0">
+                    </div>
+                </div>
+
+            </form>
+
+            <button type="button">Search flight</button>
+        </section>
+    </main>
 
 
 
