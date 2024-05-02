@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/icons/ankoay.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/manage.style.css">
     <title>Ankoay | Manage </title>
 </head>
 
@@ -29,14 +30,69 @@
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="book.html">Book</a></li>
-                <li><a href="manage.html"  class="active">Manage</a></li>
+                <li><a href="manage.html" class="active">Manage</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="help.html">Help</a></li>
             </ul>
         </nav>
     </header>
-    
 
+    <main>
+        <section class="manage-hero">
+            <h2>Online booking</h2>
+        </section>
+
+        <section class="cards-container">
+            <h2>Manage or check-in your flight(s)</h2>
+
+            <div class="cards">
+                <div class="manage">
+                    <div class="img-container">
+                        <img src="assets/img/passport-2733068_1920.jpg" alt="A passport on top of a luggage">
+                    </div>
+                    <a href="#booking-info">Manage My Booking</a>
+                    <p>Make changes to your travel plans, and view your booking details</p>
+                </div>
+
+                <div class="check-in">
+                    <div class="img-container">
+                        <img src="assets/img/check-in.jpg" alt="Airport check-in">
+                    </div>
+                    <a href="#booking-info">Online check-in</a>
+                    <p>Online check-in opens 24 hours before your flight departs</p>
+                </div>
+
+                <div class="flight-status">
+                    <div class="img-container">
+                        <img src="assets/img/flight-status.jpg" alt="Airport flight status">
+                    </div>
+                    <a href="#booking-info">Flight Status</a>
+                    <p>Check the latest status of our flights over the next 10 days</p>
+                </div>
+            </div>
+        </section>
+
+        <sectioon class="flight-info">
+            <h2>My booking</h2>
+            <form action="" id="booking-info">
+                <div class="reference">
+                    <label for="reference">Booking reference : </label>
+                    <input type="text" name="booking" id="reference" required>
+                </div>
+
+                <div class="name-of-passenger">
+                    <label for="name">Name of passenger : </label>
+                    <input type="text" name="booking" id="name" required>
+                </div>
+
+                <div class="buttons">
+                    <button type="button">Find my booking</button>
+                    <button type="button">Online check-in</button>
+                    <button type="button">Flight status</button>
+                </div>
+            </form>
+        </section>
+    </main>
 
     <footer class="footer">
         <ul class="links">

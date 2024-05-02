@@ -257,6 +257,7 @@ main .flights {
     justify-content: space-evenly;
     align-items: center;
     font-family: "Outfit", sans-serif;
+    position: relative;
 }
 
 main .flights .flights-container {
@@ -264,6 +265,7 @@ main .flights .flights-container {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    overflow: hidden;
 }
 
 .flights-container .column {
