@@ -83,3 +83,9 @@ section .container li {
     margin-left: 1vw;
 }
 
+@media screen and (max-width: 500px) {
+    .help-by-contact {
+        width: 45vw;
+    }
+}
+
